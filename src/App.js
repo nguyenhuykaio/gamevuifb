@@ -32,7 +32,7 @@ class App extends Component {
   }
   render() {
     return (
-        <div>
+        <div className="frame-home">
            <Switch>
           <Route exact path={"/"} component={Master}/>
           <Route path={"/game1"} component={Game1}  />
