@@ -1,0 +1,14 @@
+/* For desktop */
+@import url("../css/desktop.css") only screen and (min-width:992px);
+
+/* end For desktop */
+
+/* For tablet */
+@import url("../css/tablet.css") only screen and (min-width:768px) and (max-width:992px);
+ 
+/* end For tablet */
+
+/* For mobile */
+@import url("../css/mobile.css") only screen and (max-width:768px);
+
+/* end For mobile */

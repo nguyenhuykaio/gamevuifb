@@ -1,0 +1,340 @@
+/* (max-width:768px) */
+
+.frame-home{
+    background-color: white;
+}
+.frame-content{
+    background-color: rgba(0, 0, 0, 0.03)
+}
+.frame-header {
+    width: 100%;
+    background-color: #343a40!important;
+    top: 0;
+    position: fixed;
+    padding: 5px;
+    z-index: 100;
+}
+
+.logo {
+    display: inline-block;
+    color: white;
+    padding-left: 10px;
+    font-size: 3.5vmax;
+}
+
+.frame-footer {
+    width: 100%;
+    background-color: slategray;
+    bottom: 0;
+    position: relative;
+    height: 8vmax;
+    margin-top: 2%;
+}
+
+.name-footer {
+    color: white;
+    text-align: center;
+    font-size: 1.5vmax;
+    padding-top: 3%;
+}
+
+.frame-body {
+    height: auto;
+    margin-top: 65px;
+    margin-left: 5%;
+}
+
+.frame-button-facebook {
+    float: right;
+    width: 15%;
+}
+
+.logo-facebook {
+    width: 30px;
+}
+
+.frame-game {
+    width: 100%;
+}
+
+.layout-game {
+    width:95%;
+    display: inline-grid;
+    margin-top: 2.5%;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: transparent;
+}
+
+.img-game {
+    height: 250px;
+    width: 100%;
+    display: inline-block;
+}
+
+.frame-game a:hover {
+    text-decoration: none;
+}
+
+.name-game {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    height: 2.5em;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 2vmax;
+    max-height: 4em;
+}
+
+
+/* body-content-game */
+
+.frame-body-content {
+    height: auto;
+    margin-top: 65px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.frame-content-game{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid antiquewhite;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+.frame-button-facebook-content {
+    width: 62%;
+}
+
+.img-game-content {
+    height: 350px;
+    width: 100%;
+    display: inline-block;
+}
+
+.name-game-content {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    height: 2.5em;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 2.5vmax;
+    max-height: 4em;
+    color: blue;
+    font-family: inherit;
+}
+
+.text-logo-facebook{
+    font-size: 2.5vmax;
+    font-weight: bold;
+}
+.logo-facebook-content {
+    width: 30px;
+    padding: 5px;
+    border: 1px solid white;
+}
+
+/* final game 1*/
+.name-final-game1{
+    font-size: 2.2vmax;
+    color: red;
+}
+.img-game1-content-final {
+    height: 220px;
+    width: 45%;
+    display: inline-block;
+}
+.img-game1-transfer-content-final{
+    height: 50px;
+    width: 10%;
+    display: inline-block;
+    padding: 5px;   
+}
+/* final game 2 */
+
+.img-game2-content-final{
+    width: 100%;
+    height: 265px;
+    position: relative;
+}
+.name-korea{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 19%;
+    font-size: 3.5vmax;
+    padding: 5px;
+    max-width: 50%;
+    white-space: pre-wrap;
+    font-family: cursive;
+    color: mediumseagreen;
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 425px) {
+    .name-korea {
+        margin-top: 13%;
+        margin-left: 15%;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .name-korea {
+        margin-top: 15%;
+        margin-left: 13%;
+  
+    }
+}
+@media only screen and (max-width: 320px) {
+    .name-korea {    
+        margin-top: 15%;
+        margin-left: 6%;
+    }
+}
+/* final game 3 */
+.frame-zodiac{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.content-zodiac{
+    position: absolute;
+    z-index: 1;
+    width: 86%;
+
+}
+.name-text-zodiac{
+    white-space: pre-wrap;
+    color: yellow;
+    font-size: 2em;
+    margin-left: 10%;
+    font-family: Bookman Old Style;
+}
+.text-3 {
+    white-space: pre-wrap;
+    color: lightyellow;
+    font-size: 2.5vmax;
+    float: left;
+    padding-left: 5px;
+    font-family: Bookman Old Style;
+}
+.img-game3-content-final{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    opacity: 0.35;
+    font-family: Bookman Old Style;
+}
+.text-advice-3{
+    white-space: pre-wrap;
+    color: lightyellow;
+    font-size: 2.1vmax;
+    font-family: Bookman Old Style;
+}
+
+
+ /* final game 6 */
+
+ .img-game6-data-fb{
+    width: 30%;
+    height: 160px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 30%;
+    margin-top: 9px;
+    padding: 3px;
+    border: 1px solid antiquewhite;
+    -webkit-box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content-birthday{
+    position: absolute;
+    z-index: 1;
+    margin-top: 26%;
+    border: 1px solid chocolate;
+    padding: 1%;
+    width: 86%;
+    text-align: -webkit-auto;
+    font-family: Bookman Old Style;
+}
+.text-6{
+    white-space: pre-wrap;
+    color: red;
+    font-size: 1em;
+
+}
+.strg-6{
+    white-space: pre-wrap;
+    color: blueviolet;
+    font-size: 1em;
+}
+.img-game6-content-final{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+@media only screen and (max-width: 425px) {
+    .content-birthday {
+        margin-top: 42%;
+        width: 85%;    
+    }
+}
+@media only screen and (max-width: 375px) {
+    .content-birthday {
+        margin-top: 50%;
+        width: 85%;    
+    }
+}
+@media only screen and (max-width: 320px) {
+    .content-birthday {
+        margin-top: 56%;
+        width: 85%;    
+    }
+    .img-game6-content-final{
+        width: 100%;
+        height: 440px;
+        position: relative;
+    }
+}
+
+/* finale game 7 */
+.img-game7-content-final{
+    width: 100%;
+    height: 340px;
+    position: relative;
+}
+.name-japan{
+    position: absolute;
+    z-index: 1;
+    white-space: pre-wrap;
+    font-size: 3vmax;
+    margin-left: 25%;
+    margin-top: 19%;
+    color: red;
+    max-width: 37%;
+    font-family: Bookman Old Style;
+}
+@media only screen and (max-width: 425px) {
+    .name-japan {
+        font-size: 3vmax;
+        margin-left: 21%;
+        margin-top: 32%;
+        max-width: 46%;
+  
+    }
+}
+@media only screen and (max-width: 375px) {
+    .name-japan {
+        margin-top: 39%;
+  
+    }
+}
+@media only screen and (max-width: 320px) {
+    .name-japan {
+        margin-top: 47%;
+  
+    }
+}
+
+/* trang chu */
+.redirect-home{
+    width: 62%;
+    font-size: 2vmax;
+    font-weight: bold;
+}
