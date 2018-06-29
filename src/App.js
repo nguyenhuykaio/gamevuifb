@@ -32,15 +32,15 @@ class App extends Component {
   }
   render() {
     return (
-        <div className="frame-home">
+        <div>
            <Switch>
-          <Route exact path={"/"} component={Master}/>
-          <Route path={"/game1"} component={Game1}  />
-          <Route path={"/game2"} component={Game2}  />
-          <Route path={"/game3"} component={Game3} />
-          <Route path={"/game4"} component={Game4}/>
-          <Route path={"/game6"} component={Game6}/>
-          <Route path={"/game7"} component={Game7}/>
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={Master}/>
+          <Route path={`${process.env.PUBLIC_URL}/game1`} component={Game1}  />
+          <Route path={`${process.env.PUBLIC_URL}/game2`} component={Game2}  />
+          <Route path={`${process.env.PUBLIC_URL}/game3`} component={Game3} />
+          <Route path={`${process.env.PUBLIC_URL}/game4`} component={Game4}/>
+          <Route path={`${process.env.PUBLIC_URL}/game6`} component={Game6}/>
+          <Route path={`${process.env.PUBLIC_URL}/game7`} component={Game7}/>
  
 
           <Route path={"/finalgame1"} component={FinalGame1}/>
