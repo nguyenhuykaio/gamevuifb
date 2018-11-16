@@ -8,7 +8,7 @@ import { Header } from '../layouts/Header';
 import { Footer } from '../layouts/Footer';
 
 import { importAll } from '../common/common';
-import { convertDateMDY, convertVietnamese } from './process';
+import {  convertVietnamese } from './process';
 import {ShareFB} from '../component/loginFacebook';
 import {  HOST } from './global';
 
@@ -41,13 +41,13 @@ export class FinalGame7 extends Component {
                 let names = name.toUpperCase();
                 let nameJp = "";
                 for (let i = 0; i < names.length; i++) {
-                    if (name[i] == '-') {
+                    if (name[i] === '-') {
 
                         nameJp += ' ';
                         continue;
                     }
-                    let index = data.findIndex(x => x.vi.trim() == names[i].trim());
-                    console.log(index);
+                    let index = data.findIndex(x => x.vi.trim() === names[i].trim());
+
                     nameJp += data[index].jp.trim();
                 }
 
@@ -59,8 +59,6 @@ export class FinalGame7 extends Component {
             .catch(err => console.log(err))
     }
     render() {
-
-        console.log(this.state.dataName);
         return (
             <div>
                 <Header />

@@ -7,15 +7,14 @@ import '../css/space.css';
 import { Header } from '../layouts/Header';
 import { Footer } from '../layouts/Footer';
 
-import { importAll } from '../common/common';
 
-import {Facebook,ShareFB} from '../component/loginFacebook';
+import {Facebook} from '../component/loginFacebook';
 import { HOST_WEB, HOST_IMG } from './global';
 
 
 
 const HOST_IMAGE = HOST_IMG+'game/';
-const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
+// const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
 
 export class Game1 extends Component{
     constructor(props){
@@ -35,7 +34,7 @@ export class Game1 extends Component{
         .then(res => {
             return res.json();
         }).then(data => {
-            console.log(data);
+
             this.setState({
                 listData:data
             });

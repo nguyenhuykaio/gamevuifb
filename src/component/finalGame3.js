@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  '../css/reponsive.css';
+import '../css/reponsive.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 // cai dat Bootstrap
@@ -9,95 +9,94 @@ import { Footer } from '../layouts/Footer';
 
 import { importAll } from '../common/common';
 import { convertDateMDY, valueMonthDay } from './process';
-import {ShareFB} from '../component/loginFacebook';
-import { HOST } from './global';
+import { ShareFB } from '../component/loginFacebook';
+import {  HOST_WEB } from './global';
 
 
 const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
 
-export class FinalGame3 extends Component{
-    constructor(props){
+export class FinalGame3 extends Component {
+    constructor(props) {
         super(props);
         let data = JSON.parse(localStorage.getItem('dataUser'));
-        this.state={
+        this.state = {
             result: {},
             user: data
         };
     }
-    componentWillMount(){
-        let dt=convertDateMDY(this.state.user.birthday);
-        let key=valueMonthDay(dt.getMonth(),dt.getDate());
-        console.log(key)
+    componentWillMount() {
+        // let dt=convertDateMDY(this.state.user.birthday);
+        let dt = convertDateMDY("09/09/1996");
+        let key = valueMonthDay(dt.getMonth(), dt.getDate());
         this.loadIDApi(key);
     }
-    loadIDApi(key){
-        fetch(HOST+"allZodiac")
-        .then(res => {
-            return res.json();
-        }).then(data => {
-            let arr = data.map(item => {
-                console.log(item);
-                let dtStartDate = item.startDate.split("/");
-                let startDate=valueMonthDay(Number(dtStartDate[1])-1,Number(dtStartDate[0]));
+    loadIDApi(key) {
+        fetch(HOST_WEB + "allZodiac")
+            .then(res => {
+                return res.json();
+            }).then(data => {
+                let arr = data.map(item => {
+                    let dtStartDate = item.startDate.split("/");
+                    let startDate = valueMonthDay(Number(dtStartDate[1]) - 1, Number(dtStartDate[0]));
 
-                let dtEndDate=item.endDate.split("/");
-                let endDate=valueMonthDay(Number(dtEndDate[1])-1,Number(dtEndDate[0]));
+                    let dtEndDate = item.endDate.split("/");
+                    let endDate = valueMonthDay(Number(dtEndDate[1]) - 1, Number(dtEndDate[0]));
 
-                item.startDate = startDate;
-                item.endDate = endDate;
-                return item
+                    item.startDate = startDate;
+                    item.endDate = endDate;
+                    return item
+                })
+                let res = arr.find(x => (x.startDate <= key) && (x.endDate >= key))
+                this.setState({
+                    result: res
+                })
             })
-            let res = arr.find(x => (x.startDate <= key) && (x.endDate >= key))
-            this.setState({
-                result: res
-            })
-        })
-        .catch(err => console.log(err))
+            .catch(err => console.log(err))
     }
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                <Header/>
-                
-            <div className="frame-body-content" align="center">
-                        <div className="frame-content-game">
+                <Header />
 
-                            <h3 className="name-game-content">
-                                {this.state.user.name} cung hoàng của bạn là:
+                <div className="frame-body-content" align="center">
+                    <div className="frame-content-game">
+
+                        <h3 className="name-game-content">
+                            {this.state.user.name} cung hoàng của bạn là:
                             </h3>
-                            <div className="frame-zodiac">
-                            <div className="content-zodiac">     
+                        <div className="frame-zodiac">
+                            <div className="content-zodiac">
                                 <p className="name-text-zodiac">
                                     {this.state.result.name}
                                 </p>
                                 <p className="text-3">
-                                <strong className="text-advice-3">{this.state.result.name}</strong> : {this.state.result.content}
+                                    <strong className="text-advice-3">{this.state.result.name}</strong> : {this.state.result.content}
                                 </p>
                                 <p className="text-3">
-                                   <strong className="text-advice-3">Lời Khuyên</strong> {this.state.result.advice}
+                                    <strong className="text-advice-3">Lời Khuyên</strong> {this.state.result.advice}
                                 </p>
                             </div>
-                            
-                            <img className="img-game3-content-final"  src={images['img-zodiac.png']} alt="image-game" />
-                            </div>
-                            
 
-                            
+                            <img className="img-game3-content-final" src={images['img-zodiac.png']} alt="image-game" />
                         </div>
 
-                <br/>
 
-                <ShareFB/>
 
-                
-            </div>
-            <br/>
+                    </div>
+
+                    <br />
+
+                    <ShareFB />
+
+
+                </div>
+                <br />
                 <div className="frame-back">
                     <a href="/" className="btn btn-primary "><strong className="redirect-home">trang chủ</strong></a>
                 </div>
-            <br/>
-                <Footer/>
-            </div>    
+                <br />
+                <Footer />
+            </div>
         );
     }
 

@@ -11,7 +11,7 @@ import {Facebook} from '../component/loginFacebook'
 import { HOST_IMG,HOST_WEB } from './global';
 
 const HOST_IMAGE = HOST_IMG+'game/';
-const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
+
 
 export class Game3 extends Component{
     constructor(props){
@@ -28,7 +28,7 @@ export class Game3 extends Component{
         .then(res => {
             return res.json();
         }).then(data => {
-            console.log(data);
+
             this.setState({
                 listData:data
             });

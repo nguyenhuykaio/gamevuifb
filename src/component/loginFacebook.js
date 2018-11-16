@@ -1,25 +1,8 @@
 import React, { Component } from 'react';
 
 import Redirect from 'react-router-dom/Redirect';
-import FacebookProvider, { Share, Login,ShareButton  } from 'react-facebook';
-import { BrowserRouter as Router, Switch, Route, Link  } from 'react-router-dom';
+import FacebookProvider, { Share, Login,  } from 'react-facebook';
 
-
-import {Game1} from './game1';
-import {Game2} from './game2';
-import {Game3} from './game3';
-import {Game4} from './game4';
-import {Game6} from './game6';
-import {Game7} from './game7';
-
-import { Master } from '../master';
-
-import {FinalGame1} from './finalGame1';
-import {FinalGame2} from './finalGame2';
-import {FinalGame3} from './finalGame3';
-import { FinalGame6 } from './finalGame6';
-import { FinalGame7 } from './finalGame7';
-import { FinalGame4 } from './finalGame4';
 
 import { importAll } from '../common/common';
 const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
@@ -38,7 +21,6 @@ export class Facebook extends Component {
     responseFacebook = response => {
         
         localStorage.setItem('dataUser', JSON.stringify(response.profile));
-        console.log(response);
         this.setState({
             isLoggedIn: true,
             token: response.tokenDetail.accessToken
@@ -50,8 +32,7 @@ export class Facebook extends Component {
     render() {
 
         let path = this.props.match.path;
-        // console.log(path);
-        console.log(this.state.response);
+
         if (this.state.isLoggedIn) {
 
             switch (path) {

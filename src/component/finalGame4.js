@@ -8,12 +8,11 @@ import { Header } from '../layouts/Header';
 import { Footer } from '../layouts/Footer';
 
 import { importAll } from '../common/common';
-import { convertDateMDY, convertVietnamese } from './process';
-import {ShareFB} from '../component/loginFacebook';
-import { HOST_IMG, HOST } from './global';
+import { ShareFB } from '../component/loginFacebook';
+import { HOST_IMG, HOST_WEB } from './global';
 
 
-const HOST_IMAGE_GAME4 = HOST_IMG+'worldcup/';
+const HOST_IMAGE_GAME4 = HOST_IMG + 'worldcup/';
 const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
 
 export class FinalGame4 extends Component {
@@ -25,29 +24,28 @@ export class FinalGame4 extends Component {
         };
 
     }
-    componentWillMount() {
+    componentWillMount = async () => {
         let data = JSON.parse(localStorage.getItem('dataUser'));
         this.setState({
             user: data,
         });
-        this.worldcup();
+        await this.worldcup();
     }
 
-    worldcup() {
-        fetch(HOST+"allworldcup")
+    worldcup = async () => {
+        await fetch(HOST_WEB + "allworldcup")
             .then(res => res.json())
             .then(data => {
                 var randomItem = data[Math.floor(Math.random() * data.length)];
-                // console.log(randomItem);
                 this.setState({
                     list: randomItem
                 })
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err)
+            })
     }
     render() {
-
-        console.log(this.state.list)
         const pic = this.state.user.picture.data.url;
         return (
             <div>
@@ -70,7 +68,7 @@ export class FinalGame4 extends Component {
 
                     <br />
 
-                   <ShareFB/>
+                    <ShareFB />
 
 
                 </div>
