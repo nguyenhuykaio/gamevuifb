@@ -1,15 +1,15 @@
 {
   "main.css": "static/css/main.e1d1a793.css",
   "main.css.map": "static/css/main.e1d1a793.css.map",
-  "main.js": "static/js/main.6848f499.js",
-  "main.js.map": "static/js/main.6848f499.js.map",
-  "static\\media\\facebook-logo.svg": "static/media/facebook-logo.ea106d23.svg",
-  "static\\media\\gamepad.svg": "static/media/gamepad.9032ee57.svg",
-  "static\\media\\img-birthday.jpg": "static/media/img-birthday.38aff6da.jpg",
-  "static\\media\\img-japan.jpg": "static/media/img-japan.e6c9a91b.jpg",
-  "static\\media\\img-korea.png": "static/media/img-korea.f7f972d8.png",
-  "static\\media\\img-zodiac.png": "static/media/img-zodiac.bcff2e05.png",
-  "static\\media\\imgtest.jpeg": "static/media/imgtest.83ef9875.jpeg",
-  "static\\media\\test.jpg": "static/media/test.ee62fdfd.jpg",
-  "static\\media\\transfer.svg": "static/media/transfer.c0851f9a.svg"
+  "main.js": "static/js/main.14faa397.js",
+  "main.js.map": "static/js/main.14faa397.js.map",
+  "static/media/facebook-logo.svg": "static/media/facebook-logo.ea106d23.svg",
+  "static/media/gamepad.svg": "static/media/gamepad.9b58e307.svg",
+  "static/media/img-birthday.jpg": "static/media/img-birthday.38aff6da.jpg",
+  "static/media/img-japan.jpg": "static/media/img-japan.e6c9a91b.jpg",
+  "static/media/img-korea.png": "static/media/img-korea.f7f972d8.png",
+  "static/media/img-zodiac.png": "static/media/img-zodiac.bcff2e05.png",
+  "static/media/imgtest.jpeg": "static/media/imgtest.83ef9875.jpeg",
+  "static/media/test.jpg": "static/media/test.ee62fdfd.jpg",
+  "static/media/transfer.svg": "static/media/transfer.c0851f9a.svg"
 }
